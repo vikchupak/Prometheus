@@ -29,6 +29,7 @@
       - COUNTER (how many times x happened)
       - GAUGE (current value of x now)
       - HISTOGRAM (how long or how big)
+      - SUMMARY
  
 ---
 
