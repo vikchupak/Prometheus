@@ -20,13 +20,6 @@
 
 ---
 
-Metrics collecting mechanisms
-- **Pull** (Prometheus periodically fetches metrics directly from `/metrics` targets' endpoints)
-- **Pushgateway** (To push metrics directly to Prometheus, but this should only be used in exceptional cases)
-- ***Other monitoring systems use*** **Push** (Targets are pushing their matric data themselves to the collection platform [Amazon Cloud Watch as example])
-
----
-
 - Things being monitored are called **targets**
 - Each target **has units(metrics)** being collected, like CPU usage, memory usage, requests count/duration.
 - Metrics are human-redable text-based format data.
@@ -37,3 +30,9 @@ Metrics collecting mechanisms
       - GAUGE (current value of x now)
       - HISTOGRAM (how long or how big)
  
+---
+
+Metrics collecting mechanisms
+- **Pull** (Prometheus periodically fetches metrics directly from `/metrics` targets' endpoints)
+- **Pushgateway** (To push metrics directly to Prometheus, but this should only be used in exceptional cases)
+- ***Other monitoring systems use*** **Push** (Targets are pushing their matric data themselves to the collection platform [Amazon Cloud Watch as example])
