@@ -35,5 +35,5 @@
 
 Metrics collecting mechanisms
 - **Pull** (Prometheus periodically fetches metrics directly from `/metrics` targets' endpoints)
-- **Pushgateway** (To push metrics directly to Prometheus, but this should only be used in exceptional cases)
+- **Pushgateway** (To push metrics directly to Prometheus, but this should only be used in exceptional cases, for example for short-lived targets like cron jobs)
 - ***Other monitoring systems use*** **Push** (Targets are pushing their matric data themselves to the collection platform [Amazon Cloud Watch as example])
