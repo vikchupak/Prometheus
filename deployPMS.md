@@ -35,7 +35,7 @@ kubectl get all -n monitoring
 
 ---
 
-- `deployment.apps/monitoring-kube-prometheus-operator` - prometheus operator (it created prometheus server and alert manager)
+- `deployment.apps/monitoring-kube-prometheus-operator` - prometheus operator (it created prometheus server and alert manager). Manages/orchestrates the monitoring stack.
 - `deployment.apps/monitoring-kube-state-metrics` - installed as nested dependency helm chart. Scrapes **k8s** infrasctucture components out-of-the-box. **So k8s components are monotored out-of-the-box.**
 
 ---
