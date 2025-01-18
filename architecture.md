@@ -1,6 +1,6 @@
 - Main Component: **Prometheus server**
   - Does actual monitoring work
-  - Made up of 3 parts:
+  - Made up of 3 parts(sometimes referenced as **Prometheus Monitoring Stack**):
     - **Metrics Storage:** Time Series Database.
       - Stores all metrics data, like CPU usage, Memory usage, etc.
     - **Metrics Retrieval:** Data Retrieval Worker.
