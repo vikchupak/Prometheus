@@ -18,4 +18,7 @@ Expose Grafana UI to host machine
 kubectl port-forward service/monitoring-grafana -n monitoring 8080:80
 
 # http://localhost:8080
+
+# login: admin
+# password: prom-operator
 ```
