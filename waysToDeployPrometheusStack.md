@@ -1,7 +1,7 @@
 # Ways to deploy prometheus monitoring stack in k8s
 
 - Create all k8s resources/components via deployments yaml files yourself (NOT EFFICIENT). [Manage everything manually]
-- Using **Prometheus operator** (MORE EFFICIENT). [Deploy only Prometheus operator, and it will automatically manage PMS components]
+- Using **Prometheus operator** (MORE EFFICIENT). [Deploy Prometheus operator, and it will automatically manage PMS components]
   - https://github.com/prometheus-operator/prometheus-operator
   - Manages all PMS components
   - But still requires manual initial setup
