@@ -22,3 +22,28 @@ kubectl port-forward service/monitoring-grafana -n monitoring 8080:80
 # login: admin
 # password: prom-operator
 ```
+
+- Dashboard is a set of one or more **panels**
+- Dashboards are organized in folders
+- You can create your own dashboards
+- Row is a logical divider within a dashboard
+- Rows are used to group panels together
+
+---
+
+- Panel is a basic visualization building block
+- Composed by query and visualization
+- Each panel has a **query editor** spesific to the data source selected in the panel
+- Can be moved and resized within a dashboard
+
+---
+
+Structure:
+- Folders
+- Dashboards
+- Rows
+- Panels
+
+---
+
+**When select edit panel, we can see promQL queries used for visualization. And we can edit these queries.**
