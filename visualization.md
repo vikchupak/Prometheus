@@ -1,6 +1,6 @@
 # Prometheus UI
 
-Very simplistic UI.
+Very simplistic UI. But it contains low level data.
 
 Expose Prometheus UI on localhost
 ```bash
