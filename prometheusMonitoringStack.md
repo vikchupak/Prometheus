@@ -1,6 +1,8 @@
 # Prometheus monitoring stack components
 
-Open source helm chart https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+Open source helm chart:
+- https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+- https://github.com/prometheus-operator/prometheus-operator
 
 The **Prometheus Monitoring Stack** refers to a set of tools and components that work together with Prometheus to provide a comprehensive monitoring and alerting solution. These tools complement Prometheus by offering features like visualization, long-term storage, log aggregation, and more.
 
