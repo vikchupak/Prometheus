@@ -28,7 +28,7 @@ List everything created by helm chart in namespace
 kubectl get all -n monitoring 
 ```
 
-# Decription of some conponents created
+# Description of some conponents created
 
 - `statefulset.apps/prometheus-monitoring-kube-prometheus-prometheus` - actual prometheus server
 - `statefulset.apps/alertmanager-monitoring-kube-prometheus-alertmanager` - actual alert manager
