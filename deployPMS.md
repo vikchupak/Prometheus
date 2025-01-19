@@ -50,4 +50,4 @@ kubectl get pod -n monitoring
 
 - `prometheus-monitoring-kube-prometheus-prometheus-0` - **pod with 2 containers**
   - `prometheus` - main pod's container. Actual Prometheus container.
-  - `config-reloader` - sidecar container that watches for config changes and reloads the prometheus for the updated configs to take effect.
+  - `config-reloader` - sidecar container that watches for **config changes (like updated alert rules, etc.)** and reloads the prometheus for the updated configs to take effect.
