@@ -44,6 +44,10 @@ kubectl get all -n monitoring
 
 ---
 
+**Also prometeus stack components are also monitored out-of-the-box.**
+
+---
+
 ```bash
 kubectl get pod -n monitoring
 ```
