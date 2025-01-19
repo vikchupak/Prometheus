@@ -48,6 +48,10 @@ kubectl get all -n monitoring
 kubectl get pod -n monitoring
 ```
 
-- `prometheus-monitoring-kube-prometheus-prometheus-0` - **pod with 2 containers**
+- `prometheus-monitoring-kube-prometheus-prometheus-0` - **prometheus pod with 2 containers**
   - `prometheus` - main pod's container. Actual Prometheus container.
   - `config-reloader` - sidecar container that watches for **config changes (like updated alert rules, etc.)** and reloads the prometheus for the updated configs to take effect.
+ 
+- `alertmanager-monitoring-kube-prometheus-alertmanager-0` - **alertmanager pod with 2 containers**
+  - a
+  - `config-reloader` - sidecar container that watches for **alert manager config changes** and reloads the Alertmanager for the updated configs to take effect.
