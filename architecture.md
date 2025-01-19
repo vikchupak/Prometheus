@@ -1,3 +1,7 @@
+# Architecture
+
+https://github.com/prometheus/prometheus?tab=readme-ov-file#architecture-overview
+
 - Main Component: **Prometheus server**
   - Does actual monitoring work
   - Made up of 3 parts:
