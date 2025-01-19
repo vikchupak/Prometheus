@@ -82,7 +82,7 @@ Alertmanager is a separate app. Like Prometheus server. So, this is why **it has
   ```bash
   kubectl port-forward svc/monitoring-kube-prometheus-alertmanager -n monitoring 9093:9093
 
-  # http:localhost:9093
+  # http://localhost:9093
   ```
 - When prometheus detects rule in **firing** state it sends the alert to Alertmanager.
 - Alert manger then sends actual notification via email, slack, etc.
