@@ -1,5 +1,7 @@
 # Alerting
 
+https://samber.github.io/awesome-prometheus-alerts/
+
 - Define what we want to be notified about (Alert Rules in Prometheus Server)
 - Send actual notifications (Alertmanager)
 
