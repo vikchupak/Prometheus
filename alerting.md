@@ -13,7 +13,7 @@
 - `for` is used to wait before sending notification to check if the issue resoles itself.
 - `anotations` is used to as descriptions of what has happened
 
-## Ways to create Alert Rules
+## Ways to create Prometheus Alert Rules
 
 - **Without Prometheus operator.**
   - Find `rules_files` file location. Add a rule we want to apply.
