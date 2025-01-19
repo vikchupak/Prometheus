@@ -134,3 +134,10 @@ Alertmanager is a separate app. Like Prometheus server. So, this is why **it has
   ```bash
   kubectl apply -f alertmanager-config.yaml
   ```
+
+## Useful
+
+See all received alerts by Alertmanager
+```
+http://localhost:9093/api/v2/alerts
+```
