@@ -31,3 +31,43 @@
   - Create/deploy custom k8s component defined by CRD(Custom Resource Definition) `kind: PrometheusRule`.
     - Official doc https://docs.openshift.com/container-platform/4.17/rest_api/monitoring_apis/prometheusrule-monitoring-coreos-com-v1.html
   - Prometheus operator takes care of finding that component and applying that rule. And reloading the prometheus.
+
+  ### Example: Alerting and Recording Rules
+  
+  prometheus-rules.yaml
+  ```yaml
+  apiVersion: monitoring.coreos.com/v1
+  kind: PrometheusRule
+  metadata:
+    name: example-prometheus-rules
+    namespace: monitoring
+  spec:
+    groups:
+    - name: example-alerts
+      rules:
+      - alert: HighCPUUsage
+        expr: avg(rate(process_cpu_seconds_total[5m])) > 0.8
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage detected"
+          description: "The average CPU usage is above 80% for the last 2 minutes. Current value: {{ $value }}"
+      - alert: InstanceDown
+        expr: up == 0
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Instance down"
+          description: "The instance {{ $labels.instance }} is down for more than 5 minutes."
+  
+    - name: example-recording-rules
+      rules:
+      - record: job:http_requests_per_second
+        expr: sum(rate(http_requests_total[1m])) by (job)
+  ```
+  
+  ```bash
+  kubectl apply -f prometheus-rules.yaml
+  ```
