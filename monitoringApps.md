@@ -25,7 +25,6 @@ redisAddress: redis://<redis-service-name>:<redis-service-port> # Tells to the e
 helm install redis-exporter prometheus-community/prometheus-redis-exporter -f redis-values.yaml
 ```
 
-
 List all service monitors
 ```bash
 kubectl get servicemonitor -n monitoring
@@ -37,4 +36,16 @@ kubectl get servicemonitor -n monitoring
 # prometheus-operator
 # node-exporter
 # etc...
+```
+
+- **Redis-exporter is deployed as a separate pod, not sidecar container**
+- But, it could be deployed as a sidecar container as well
+
+So, `http://<redis-service-ip>:<redis-service-port>/metrics` endpoint to be scraped by prometheus
+
+```bash
+kubectl get pod
+
+# redis-pod
+# redis-exporter-pod
 ```
