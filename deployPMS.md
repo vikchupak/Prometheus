@@ -53,5 +53,5 @@ kubectl get pod -n monitoring
   - `config-reloader` - sidecar container that watches for **config changes (like updated alert rules, etc.)** and reloads the prometheus for the updated configs to take effect.
  
 - `alertmanager-monitoring-kube-prometheus-alertmanager-0` - **alertmanager pod with 2 containers**
-  - a
+  - `alertmanager` - main pod's container. Actual Alertmanager container.
   - `config-reloader` - sidecar container that watches for **alert manager config changes** and reloads the Alertmanager for the updated configs to take effect.
