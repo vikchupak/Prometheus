@@ -13,7 +13,7 @@
 - `for` is used to wait before sending notification to check if the issue resoles itself.
 - `anotations` is used to as descriptions of what has happened
 
-# Ways to create Alert Rules
+## Ways to create Alert Rules
 
 - **Without Prometheus operator.**
   - Find `rules_files` file location. Add a rule we want to apply.
@@ -86,3 +86,51 @@ Alertmanager is a separate app. Like Prometheus server. So, this is why **it has
   ```
 - When prometheus detects rule in **firing** state it sends the alert to Alertmanager.
 - Alert manger then sends actual notification via email, slack, etc.
+
+## Ways to configure Alertmanager
+
+- **Without Prometheus operator.**
+  - Find `/etc/alertmanager/alertmanager.yml` file location. Adjust the config.
+  - Restart Alertmanager for the changes to take effect.
+  
+- **Using Prometheus operator.**
+  - When deployed via Prometheus operator, the Alertmanager config file is stored in **secret** k8s component.
+  - Create/deploy custom k8s component defined by CRD(Custom Resource Definition) `kind: AlertmanagerConfig`.
+    - Official doc https://docs.openshift.com/container-platform/4.17/rest_api/monitoring_apis/alertmanagerconfig-monitoring-coreos-com-v1beta1.html
+  - Prometheus operator takes care of finding that component and applying that config. And reloading the Alertmanager.
+
+  ### Example `AlertmanagerConfig` YAML
+  ```yaml
+  apiVersion: monitoring.coreos.com/v1alpha1
+  kind: AlertmanagerConfig
+  metadata:
+    name: example-alertmanager-config
+    namespace: monitoring
+  spec:
+    route:
+      groupBy: ['alertname', 'cluster']
+      groupWait: 30s
+      groupInterval: 5m
+      repeatInterval: 1h
+      receiver: email-receiver
+    receivers:
+    - name: email-receiver
+      emailConfigs:
+      - to: team@example.com
+        from: alertmanager@example.com
+        smarthost: smtp.example.com:587
+        authUsername: alertmanager@example.com
+        authPassword:
+          name: alertmanager-secret
+          key: email-password
+    inhibitRules:
+    - sourceMatch:
+        severity: critical
+      targetMatch:
+        severity: warning
+      equal: ['alertname', 'cluster']
+  ```
+  
+  ```bash
+  kubectl apply -f alertmanager-config.yaml
+  ```
