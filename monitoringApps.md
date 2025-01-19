@@ -49,3 +49,9 @@ kubectl get pod
 # redis-pod
 # redis-exporter-pod
 ```
+
+# Monitor own/custom applications
+
+- Client libraries are used for this.
+- The Libs implement the prometheus metric types
+- No separate exporter. `/metrics` endpoint is exposed by the app itself.
