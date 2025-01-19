@@ -41,3 +41,13 @@ kubectl get all -n monitoring
 ---
 
 - `deamonset.apps/monitoring-prometheus-node-exporter` - connects to server/node and translates the worker node metrics to prometheus metrics. **So Worker nodes are monitored out-of-the-box.**
+
+---
+
+```bash
+kubectl get pod -n monitoring
+```
+
+- `prometheus-monitoring-kube-prometheus-prometheus-0` - **pod with 2 containers**
+  - `prometheus` - main pod's container. Actual Prometheus container.
+  - `config-reloader` - sidecar container that watches for config changes and reloads the prometheus for the updated configs to take effect.
