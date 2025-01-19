@@ -13,6 +13,9 @@ kubectl port-forward service/monitoring-kube-prometheus-prometheus -n monitoring
 
 # Grafana UI
 
+Preconfigured dashboards that can be imported
+- https://samber.github.io/awesome-prometheus-alerts/
+
 Expose Grafana UI to host machine
 ```bash
 kubectl port-forward service/monitoring-grafana -n monitoring 8080:80
