@@ -26,8 +26,8 @@ kubectl port-forward service/monitoring-grafana -n monitoring 8080:80
 # password: prom-operator
 ```
 
-- Dashboard is a set of one or more **panels**
 - Dashboards are organized in folders
+- Dashboard is a set of one or more **panels**
 - You can create your own dashboards
 - Row is a logical divider within a dashboard
 - Rows are used to group panels together
