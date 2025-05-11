@@ -59,4 +59,5 @@ Folder
 ---
 
 - **When select edit panel, we can see `promQL queries used for visualization`. And we can edit these queries.**
-- In `Connections` setting, we can configure sources to visualize data from, like prometheus.
+- In `Connections > Data sources` setting, we can configure sources to visualize data from, like prometheus.
+  - Grafana is a visualization tool, not limited to prometheus. So it can visualize other sources/apps like PostgreSQL, etc.
