@@ -58,5 +58,5 @@ Folder
 
 ---
 
-- **When select edit panel, we can see promQL queries used for visualization. And we can edit these queries.**
+- **When select edit panel, we can see `promQL queries used for visualization`. And we can edit these queries.**
 - In `Connections` setting, we can configure sources to visualize data from, like prometheus.
