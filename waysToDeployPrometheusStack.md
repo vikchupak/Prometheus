@@ -5,7 +5,7 @@
   - https://github.com/prometheus-operator/prometheus-operator
   - Manages all PMS components
   - But still requires manual initial setup
-- Using helm chart to deploy (MOST EFFICIENT)
+- **Using helm chart to deploy PMS** (MOST EFFICIENT)
   - https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
   - Includes/uses **Prometheus operator**
   - Helm: initial setup
