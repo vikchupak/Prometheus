@@ -34,7 +34,7 @@ These tools help visualize Prometheus metrics in a user-friendly way.
        - Supports sharing dashboards and setting alerts directly on visualizations.
      - **Core Use**: Displaying metrics and trends graphically.
 
-  - **b. Prometheus Console**
+  - **b. Prometheus UI**
     - Built-in basic visualization tool for querying and displaying metrics using PromQL (less powerful than Grafana).
 
 ---
