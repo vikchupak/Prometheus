@@ -51,3 +51,28 @@ Metrics collecting mechanisms
 - **Pull** (Prometheus periodically fetches metrics directly from `/metrics` targets' endpoints)
 - **Pushgateway** (To push metrics directly to Prometheus, but this should only be used in exceptional cases, for example for short-lived targets like cron jobs)
 - ***Other monitoring systems use*** **Push** (Targets are pushing their matric data themselves to the collection platform [Amazon Cloud Watch as example])
+
+---
+
+# Alertmanager
+
+**Prometheus server does not include Alertmanager by default**—they are separate components.
+
+Here’s the distinction:
+
+* **Prometheus Server**: Responsible for collecting and storing time series data, and evaluating alerting rules.
+* **Alertmanager**: Handles alerts sent by Prometheus (or other systems), deduplicates, groups, and routes them (e.g., to email, Slack, PagerDuty, etc.).
+
+### To use alerts in Prometheus:
+
+1. **Configure alerting rules** in Prometheus (`alerting_rules.yml` or inline in `prometheus.yml`).
+2. **Deploy Alertmanager** as a separate service.
+3. **Tell Prometheus how to reach Alertmanager** by setting the `alerting` section in `prometheus.yml`:
+
+   ```yaml
+   alerting:
+     alertmanagers:
+       - static_configs:
+           - targets:
+             - 'alertmanager:9093'
+   ```
