@@ -47,6 +47,15 @@ Structure:
 - Rows
 - Panels
 
+```
+Folder
+ └── Dashboard
+      ├── Row (optional)
+      │    ├── Panel
+      │    └── Panel
+      └── Panel
+```
+
 ---
 
 - **When select edit panel, we can see promQL queries used for visualization. And we can edit these queries.**
