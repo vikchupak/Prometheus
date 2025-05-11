@@ -24,6 +24,16 @@ https://github.com/prometheus/prometheus?tab=readme-ov-file#architecture-overvie
 
 ---
 
+# prometeus.yaml
+
+Config/file is used to configure targets and intervals, etc.
+
+- How often
+- Rules
+- Targets
+
+---
+
 - Things being monitored are called **targets**
 - Each target **has units(metrics)** being collected, like CPU usage, memory usage, requests count/duration.
 - Metrics are human-redable text-based format data.
