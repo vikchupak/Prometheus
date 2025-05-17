@@ -28,7 +28,7 @@ https://samber.github.io/awesome-prometheus-alerts/
          - "/etc/prometheus/alerting-rules/*.yml"
        ```
   - Reload Prometheus app for the changes to take effect.
-  - ***If there is prometeus operator, changing the files won't take effect as Prometheus operator will ovveride the changes back***
+  - ***If there is prometeus operator, changing the files won't take effect as Prometheus operator will override the changes back***
 
 - **Using Prometheus operator(preferred) in k8s**
   - Create/deploy custom k8s component defined by CRD(Custom Resource Definition) `kind: PrometheusRule`.
