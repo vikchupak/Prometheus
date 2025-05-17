@@ -91,11 +91,11 @@ Alertmanager is a separate app. Like Prometheus server. So, this is why **it has
 
 ## Ways to configure Alertmanager
 
-- **Without Prometheus operator.**
+- **Without Prometheus operator**
   - Find `/etc/alertmanager/alertmanager.yml` file location. Adjust the config.
   - Restart Alertmanager for the changes to take effect.
   
-- **Using Prometheus operator.**
+- **Using Prometheus operator(preferred) in k8s**
   - When deployed via Prometheus operator, the Alertmanager config file is stored in **secret** k8s component.
   - Create/deploy custom k8s component defined by CRD(Custom Resource Definition) `kind: AlertmanagerConfig`.
     - Official doc https://docs.openshift.com/container-platform/4.17/rest_api/monitoring_apis/alertmanagerconfig-monitoring-coreos-com-v1beta1.html
