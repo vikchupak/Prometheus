@@ -29,7 +29,7 @@ https://samber.github.io/awesome-prometheus-alerts/
        ```
   - Reload Prometheus app for the changes to take effect.
 
-- **Using Prometheus operator.**
+- **Using Prometheus operator(preferred)**
   - Create/deploy custom k8s component defined by CRD(Custom Resource Definition) `kind: PrometheusRule`.
     - Official doc https://docs.openshift.com/container-platform/4.17/rest_api/monitoring_apis/prometheusrule-monitoring-coreos-com-v1.html
   - Prometheus operator takes care of finding that component **by matching labels** and applying that rule. And reloading the prometheus.
