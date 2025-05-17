@@ -17,7 +17,7 @@ https://samber.github.io/awesome-prometheus-alerts/
 
 ## Ways to create Prometheus Alert Rules
 
-- **Without Prometheus operator.**
+- **Without Prometheus operator**
   - Find `rules_files` file location. Add a rule we want to apply.
     - **Steps to Identify the Rules File Location**
       - Open the Prometheus Configuration `prometheus.yml` file.
@@ -28,6 +28,7 @@ https://samber.github.io/awesome-prometheus-alerts/
          - "/etc/prometheus/alerting-rules/*.yml"
        ```
   - Reload Prometheus app for the changes to take effect.
+  - ***If there is prometeus operator, changing the files won't take effect as Prometheus operator will ovveride the changes back***
 
 - **Using Prometheus operator(preferred) in k8s**
   - Create/deploy custom k8s component defined by CRD(Custom Resource Definition) `kind: PrometheusRule`.
