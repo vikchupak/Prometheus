@@ -101,7 +101,6 @@ Alertmanager is a separate app. Like Prometheus server. So, this is why **it has
   - Create/deploy custom k8s component defined by CRD(Custom Resource Definition) `kind: AlertmanagerConfig`.
     - Official doc https://docs.openshift.com/container-platform/4.17/rest_api/monitoring_apis/alertmanagerconfig-monitoring-coreos-com-v1beta1.html
   - Prometheus operator takes care of finding that component **by matching namespace** and applying that config. And reloading the Alertmanager.
-  - [AlertmanagerConfig CRD](https://docs.redhat.com/en/documentation/openshift_container_platform/4.18/html/monitoring_apis/monitoring-apis#alertmanagerconfig-monitoring-coreos-com-v1beta1-1) official doc
 
   ### Example `AlertmanagerConfig` YAML
   ```yaml
