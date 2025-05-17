@@ -134,8 +134,9 @@ Alertmanager is a separate app. Like Prometheus server. So, this is why **it has
       equal: ['alertname', 'cluster']
   ```
 
-  receivers - who gets the alerts;
-  route - defiles how to route alerts. Which alert is routed to which receiver;
+  - receivers - who gets the alerts;
+  - route - defiles how to route alerts. Which alert is routed to which receiver;
+  - inhibitRules - suppress notifications when other related more important notifications are already firing to avoid spamming
   
   ```bash
   kubectl apply -f alertmanager-config.yaml
