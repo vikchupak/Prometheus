@@ -133,6 +133,9 @@ Alertmanager is a separate app. Like Prometheus server. So, this is why **it has
         severity: warning
       equal: ['alertname', 'cluster']
   ```
+
+  receivers - who gets the alerts;
+  route - defiles how to route alerts. Which alert is routed to which receiver;
   
   ```bash
   kubectl apply -f alertmanager-config.yaml
