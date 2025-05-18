@@ -6,3 +6,4 @@
 ](https://github.com/vikchupak/Prometheus/blob/main/deployPMSUsingHelm.md)
 3. [Visualization](https://github.com/vikchupak/Prometheus/blob/main/visualization.md)
 4. [Alerting](https://github.com/vikchupak/Prometheus/blob/main/alerting.md)
+5. [Monitoring third-party app](https://github.com/vikchupak/Prometheus/blob/main/monitoringApps.md)
