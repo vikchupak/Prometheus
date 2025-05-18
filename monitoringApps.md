@@ -1,4 +1,4 @@
-# Monitoring third-party application (like redis)
+# Monitoring third-party application (like `redis`)
 
 To monitor apps, we need:
 - Deploy **Exporter** k8s service for the app
@@ -50,7 +50,7 @@ kubectl get pod
 # redis-exporter-pod
 ```
 
-# Monitor own/custom applications (like node.js server)
+# Monitor own/custom applications (like `node.js server`)
 
 - Client libraries are used for this.
 - The Libs implement the prometheus metric types
